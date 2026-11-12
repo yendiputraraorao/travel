@@ -1,0 +1,6 @@
+{
+  "name": "Tiketux Go - Sistem Manajemen Tiket Shuttle & Travel",
+  "description": "Platform pemesanan tiket travel dan shuttle eksekutif dengan pemilihan kursi interaktif, e-tiket QR Code, pembayaran QRIS/Transfer, dan dashboard admin manajemen armada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
