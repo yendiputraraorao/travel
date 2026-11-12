@@ -36,8 +36,8 @@ class AdminPanelProvider extends PanelProvider
                 'https://fonts.bunny.net/css?family=plus-jakarta-sans:400,500,600,700,800&display=swap',
             )
             ->colors([
-                'primary' => fn () => Color::hex(\App\Services\AppSettingService::getPrimaryColor() ?? '#2563eb'),
-                'secondary' => fn () => Color::hex(\App\Services\AppSettingService::getSecondaryColor() ?? '#1e2430'),
+                'primary' => Color::hex(\App\Services\AppSettingService::getPrimaryColor() ?? '#2563eb'),
+                'secondary' => Color::hex(\App\Services\AppSettingService::getSecondaryColor() ?? '#1e2430'),
             ])
             ->darkMode(false)
             ->sidebarWidth('17rem')
