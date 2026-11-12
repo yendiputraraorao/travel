@@ -27,16 +27,17 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login(Login::class)
-            ->brandName('Tiketux Admin')
+            ->brandName(fn () => \App\Services\AppSettingService::getAppName() . ' Admin')
             ->brandLogo(fn () => view('filament.partials.brand'))
             ->brandLogoHeight('2.25rem')
-            ->favicon(asset('images/tiketux-admin-mark.svg'))
+            ->favicon(fn () => \App\Services\AppSettingService::getFavicon() ?? asset('images/tiketux-admin-mark.svg'))
             ->font(
                 'Plus Jakarta Sans',
                 'https://fonts.bunny.net/css?family=plus-jakarta-sans:400,500,600,700,800&display=swap',
             )
             ->colors([
-                'primary' => Color::hex('#2563eb'),
+                'primary' => Color::hex(\App\Services\AppSettingService::getPrimaryColor()),
+                'secondary' => Color::hex(\App\Services\AppSettingService::getSecondaryColor()),
             ])
             ->darkMode(false)
             ->sidebarWidth('17rem')
