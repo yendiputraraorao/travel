@@ -1,5 +1,5 @@
 @php
-    $settings = \App\Services\AppSettingService::getAll();
+    $settings = \App\Services\AppSettingService::getAll() ?? [];
     $branding = $settings['branding'] ?? [];
     $general = $settings['general'] ?? [];
     $company = $settings['company'] ?? [];
